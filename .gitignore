@@ -1,1 +1,3 @@
 deploy-from-local.sh
+__pycache__/
+.env
