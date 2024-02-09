@@ -18,11 +18,15 @@ docker run -p 80:80 init-api-py-image
 1. Run the `instance-setup.sh` script on the machine.
 1. Reboot the machine.
 1. Run `docker info` to verify that the current user is added to the `docker` user group and has access to docker without `sudo`.
-1. Set environment variables like DB passwords, etc.
+1. Set environment variables like DB passwords, etc. OR add them to a `.env` file under the app directory for each app.
 1. Create an `apps` folder under `home/ec2-user` to store all apps.
 1. Clone this git repository.
 1. Run the `deploy.sh` script on the machine.
-1. Run the `deploy-db.sh` script to install postgres.
+
+## Connecting to Postgres directly
+```
+psql postgresql://postgres:$DB_PASSWORD@localhost:5432/
+```
 
 ## Reference
 Most setup instructions followed here: https://levelup.gitconnected.com/deploy-a-dockerized-fastapi-application-to-aws-cc757830ba1b
