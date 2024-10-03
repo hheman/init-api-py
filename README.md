@@ -23,6 +23,8 @@ docker run -p 80:80 init-api-py-image
 1. Clone this git repository.
 1. Run the `deploy.sh` script on the machine.
 
+note: Use `sh` to run scripts. Eg. `sh deploy.sh`.
+
 ## Connecting to Postgres directly
 ```
 psql postgresql://postgres:$DB_PASSWORD@localhost:5432/
